@@ -1,26 +1,20 @@
 name: Daily Stock Alert
-
 on:
   schedule:
     - cron: '0 21 * * *'
   workflow_dispatch:
-
 jobs:
   send-alert:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install packages
         run: pip install -r requirements.txt
-
       - name: Run stock alert
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
