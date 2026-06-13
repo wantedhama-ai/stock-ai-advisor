@@ -1,0 +1,17 @@
+[
+    {
+        "ticker": "NVDA",
+        "avg_cost": 121.6052,
+        "shares": 27
+    },
+    {
+        "ticker": "AMZN",
+        "avg_cost": 233,
+        "shares": 9
+    },
+    {
+        "ticker": "GOOGL",
+        "avg_cost": 154,
+        "shares": 4
+    }
+]
