@@ -10,18 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 코드 체크아웃
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Python 설치
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: 패키지 설치
+      - name: Install packages
         run: pip install -r requirements.txt
 
-      - name: 주식 알림 실행
+      - name: Run stock alert
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
